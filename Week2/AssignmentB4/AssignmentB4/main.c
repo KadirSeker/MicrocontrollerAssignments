@@ -1,6 +1,5 @@
 /*
  * AssignmentB4.c
- * Run the example code provided by the teacher.
  *
  * Created: 9/2/2017 1:01:37 PM
  * Author : Kadir Seker, Christian Paans and Berend Vet
@@ -19,7 +18,6 @@ void wait( int ms )
 		_delay_ms( 1 );		// library function (max 30 ms at 8MHz)
 	}
 }
-
 ISR( INT1_vect )
 {
 	if(PORTC & 1)
@@ -27,7 +25,6 @@ ISR( INT1_vect )
 	else
 		PORTC = PORTC/2;		
 }
-
 ISR( INT2_vect )
 {
 	if(PORTC & 128)
@@ -37,7 +34,7 @@ ISR( INT2_vect )
 }
 
 int lookuptable[] = {0b01100001, 0b01100100, 0b01001100, 0b00011100, 0b01011000, 0b01010010, 0b01000011, 0b00100011};
-
+	
 void display(int digit)
 {
 	if(digit>15 || digit < 0)
@@ -45,7 +42,6 @@ void display(int digit)
 	else
 		PORTB = lookuptable[digit];
 }
-
 int main( void )
 {
 	// Init I/O
@@ -53,11 +49,6 @@ int main( void )
 	DDRC = 0x00;
 	int value = 0;
 	int waitduration = 500;
-
-	// Init Interrupt hardware
-	EICRA |= 0x2C;			// INT2 falling edge, INT1 rising edge
-	EIMSK |= 0x06;			// Enable INT2 & INT1
-	sei();				
 
 	while (1)
 	{

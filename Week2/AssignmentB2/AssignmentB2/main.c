@@ -1,6 +1,5 @@
 /*
  * AssignmentB2.c
- * Run the example code provided by the teacher.
  *
  * Created: 9/2/2017 1:01:37 PM
  * Author : Kadir Seker, Christian Paans and Berend Vet

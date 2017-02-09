@@ -1,6 +1,5 @@
 /*
  * AssignmentB3.c
- * Run the example code provided by the teacher.
  *
  * Created: 9/2/2017 1:01:37 PM
  * Author : Kadir Seker, Christian Paans and Berend Vet
@@ -36,7 +35,8 @@ ISR( INT2_vect )
 		PORTC = PORTC*2;
 }
 
-int lookuptable[] = {0b00111111, 0b00000110, 0b01011011, 0b01001111, 0b01100110, 0b01101101, 0b01111101, 0b00000111, 0b01111111, 0b01101111, 0b01110111, 0b01111100, 0b00111001, 0b01011110, 0b01111011, 0b01110001, 0b01111001};
+int lookuptable[] = {0b00111111, 0b00000110, 0b01011011, 0b01001111, 0b01100110, 0b01101101, 0b01111101, 0b00000111, 
+	0b01111111, 0b01101111, 0b01110111, 0b01111100, 0b00111001, 0b01011110, 0b01111011, 0b01110001, 0b01111001};
 
 void display(int digit)
 {
@@ -52,11 +52,6 @@ int main( void )
 	DDRB = 0xFF;
 	DDRC = 0x00;
 	int value = 6;
-
-	// Init Interrupt hardware
-	EICRA |= 0x2C;			// INT2 falling edge, INT1 rising edge
-	EIMSK |= 0x06;			// Enable INT2 & INT1
-	sei();				
 
 	while (1)
 	{
@@ -83,6 +78,5 @@ int main( void )
 		display(value);
 		wait(500);
 	}
-
 	return 1;
 }
