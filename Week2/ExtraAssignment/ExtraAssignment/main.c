@@ -22,7 +22,7 @@
  * PD5 = Clear result display and return to the view of the integers.
  * An image of the setup is provided in the repository.
  * The video(Dutch audio) of this setup in action can be seen on:
- * ---pending---
+ * https://www.youtube.com/watch?v=c2VXNc2tQ3w
  */
 
 #define F_CPU 8000000
