@@ -35,5 +35,5 @@ void wait( int ms )
 void adcInit()
 {
 	ADMUX = 0b01100001;		// AREF = VCC, left adjusted, pin PF1 channel 1
-	ADCSRA = 0b11100110;	// ADC-enable, no interrupts, free running, divided by 64
+	ADCSRA = 0b11100110;	// ADC-enable, no interrupts, free running, division factor 64
 }

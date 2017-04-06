@@ -1,40 +1,44 @@
-/**
- * \file
- *
- * \brief Empty user application template
- *
- */
+/* AssignmentB2.c
+ * Kadir Seker
+ */ 
 
-/**
- * \mainpage User Application template doxygen documentation
- *
- * \par Empty user application template
- *
- * Bare minimum empty user application template
- *
- * \par Content
- *
- * -# Include the ASF header files (through asf.h)
- * -# "Insert system clock initialization code here" comment
- * -# Minimal main function that starts with a call to board_init()
- * -# "Insert application code here" comment
- *
- */
+#define F_CPU 8000000
 
-/*
- * Include header files for all drivers that have been imported from
- * Atmel Software Framework (ASF).
- */
-/*
- * Support and FAQ: visit <a href="http://www.atmel.com/design-support/">Atmel Support</a>
- */
-#include <asf.h>
+#include <avr/io.h>
+#include <util/delay.h>
+#include <avr/interrupt.h>
 
-int main (void)
+#define BIT(x)	(1 << (x))
+
+void wait( int ms );
+void adcInit(void);
+
+int main( void )
 {
-	/* Insert system clock initialization code here (sysclk_init()). */
+	DDRF = 0x00;				// set PORTF for input (ADC)
+	DDRA = 0xFF;				// set PORTA for output
+	adcInit();
 
-	board_init();
+	while (1)
+	{
+		ADCSRA |= BIT(6);
+		while ( ADCSRA & BIT(6) );
+		PORTA = ADCH;
+		wait(500);
+	}
+}
 
-	/* Insert application code here, after the board has been initialized. */
+void wait( int ms )
+{
+	for (int i=0; i<ms; i++)
+	{
+		_delay_ms( 1 );		// library function (max 30 ms at 8MHz)
+	}
+}
+
+//ADC initialization
+void adcInit()
+{
+	ADMUX = 0b11100001;
+	ADCSRA = 0b10000110;
 }
