@@ -1,0 +1,31 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.2.6</VERSION>
+ <DEVICE>"ATmega128"</DEVICE>
+ <WORKING_DIR>C:\Users\Atabey\Documents\Tech Inf\Microcontrollers\MicrocontrollerAssignments\Week4\AssemblerPractice\AssemblerPractice\Debug</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\avrasm\inc</DIR>
+  <DIR>C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avrassembler\Include</DIR>
+  <DIR></DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\Users\Atabey\Documents\Tech Inf\Microcontrollers\MicrocontrollerAssignments\Week4\AssemblerPractice\AssemblerPractice\main.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.1.130\avrasm\inc\m128def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\Users\Atabey\Documents\Tech Inf\Microcontrollers\MicrocontrollerAssignments\Week4\AssemblerPractice\AssemblerPractice\Debug\AssemblerPractice.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>AssemblerPractice.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>AssemblerPractice.map</FILE>
+  <FILE>AssemblerPractice.lss</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <main><FILE>C:\Users\Atabey\Documents\Tech Inf\Microcontrollers\MicrocontrollerAssignments\Week4\AssemblerPractice\AssemblerPractice\main.asm</FILE><LINE>12</LINE></main>
+  <no_end><FILE>C:\Users\Atabey\Documents\Tech Inf\Microcontrollers\MicrocontrollerAssignments\Week4\AssemblerPractice\AssemblerPractice\main.asm</FILE><LINE>18</LINE></no_end>
+  <a><FILE>C:\Users\Atabey\Documents\Tech Inf\Microcontrollers\MicrocontrollerAssignments\Week4\AssemblerPractice\AssemblerPractice\main.asm</FILE><LINE>22</LINE></a>
+  <b><FILE>C:\Users\Atabey\Documents\Tech Inf\Microcontrollers\MicrocontrollerAssignments\Week4\AssemblerPractice\AssemblerPractice\main.asm</FILE><LINE>23</LINE></b>
+  <c><FILE>C:\Users\Atabey\Documents\Tech Inf\Microcontrollers\MicrocontrollerAssignments\Week4\AssemblerPractice\AssemblerPractice\main.asm</FILE><LINE>24</LINE></c>
+ </LABELS>
+</ASSEMBLER_INFO>

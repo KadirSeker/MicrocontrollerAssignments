@@ -29,7 +29,7 @@ int main(void)
 	init_4bits_mode();
 
 	// Write sample string
-	lcd_write_string("Kadir Seker");
+	lcd_write_string("Nicolas Cage");
 
 	// Loop forever
 	while (1)
